@@ -4,7 +4,7 @@ const {
     iniciarSesion, 
     registrarUsuario, 
     recuperarContrasena, 
-    restablecerContrasena // ⬅️ Importar la nueva función
+    restablecerContrasena 
 } = require('../controllers/controladorAutenticacion');
 const router = express.Router();
 
@@ -13,6 +13,6 @@ router.post('/iniciarSesion', iniciarSesion);
 
 // Rutas de recuperación
 router.post('/recuperarContrasena', recuperarContrasena); 
-router.put('/restablecerContrasena/:resetToken', restablecerContrasena); // ⬅️ NUEVA RUTA IMPLEMENTADA
+router.put('/restablecerContrasena/:resetToken', restablecerContrasena); 
 
 module.exports = router;
